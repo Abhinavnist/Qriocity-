@@ -79,6 +79,15 @@ const ToolbarComponent = (props) => {
               Signup
             </Button>
           </MenuItem>
+          <MenuItem onClick={handleMobileMenuClose}>
+            <Button
+              color="inherit"
+              component={RouterLink}
+              to="/post"
+            >
+              post
+            </Button>
+          </MenuItem>
         </>
       ) : (
         <>
@@ -108,16 +117,35 @@ const ToolbarComponent = (props) => {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar
+        position="static"
+        color="success"
+      >
         <Toolbar>
-          <Typography
-            className={classes.title}
-            variant="h6"
-            noWrap
-          >
-            Environment
-          </Typography>
+          <RouterLink to="/">
+            <Typography
+              className={classes.title}
+              variant="h6"
+              noWrap
+            >
+              Environment
+            </Typography>
+          </RouterLink>
           <div className={classes.grow} />
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to="/post"
+          >
+            POST
+          </Button>
+          <Button
+            color="inherit"
+            component={RouterLink}
+            to="/initiative"
+          >
+            Initative
+          </Button>
           <div className={classes.sectionDesktop}>
             {!auth.isAuthenticated ? (
               <>
@@ -154,6 +182,7 @@ const ToolbarComponent = (props) => {
               </>
             )}
           </div>
+
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"

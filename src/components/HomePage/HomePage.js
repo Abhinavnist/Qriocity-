@@ -30,7 +30,7 @@ export default function Home() {
             <p className={styles.bottomText}>Eco-Friendly Actions</p>
 
             <Link
-              to="/ecoActions"
+              to="/login"
               className={styles.button}
             >
               <span>Get Started &rarr;</span>
@@ -85,7 +85,6 @@ export default function Home() {
               <p className={styles.serviceDescription}>
                 Organisations are startups that are contributing to the
                 environment through their eco friendly products.
-                {/* We provide interface where people/organisations can buy/ donate/sell raw materials or products directly from the  eco-friendly startups. */}
               </p>
             </div>
           </div>
